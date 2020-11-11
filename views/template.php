@@ -1,4 +1,6 @@
-<?php 
+<? /**
+ * @var global $App
+ */
 header("Content-Type:text/html;charset=utf-8;");
 ?>
 <!doctype html>
@@ -15,8 +17,7 @@ header("Content-Type:text/html;charset=utf-8;");
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css" type="text/css">
 
-        <title><?=App::$pageTitle?></title>
-        <!--title><?=App::$current_controller . "::" . App::$current_action?></title-->
+        <title><?=$App->currentController . "::" . $App->currentAction?></title>
     </head>
 
 
@@ -30,15 +31,15 @@ header("Content-Type:text/html;charset=utf-8;");
             <div class="container" style="height:100%">
 
                 <!-- шапка -->
-                <?php /*if(App::$user != null)*/ include 'views/header.php'; ?>
+                <?/* include 'views/header.php'; */?>
 
 
                 <!-- контент на странице -->
-                <?php if(isset($content_view)) include 'views/'.$content_view; ?>
+                <? if(isset($content_view)) include 'views/'.$content_view; ?>
 
 
                 <!-- футер -->
-                <?php /*if(App::$user != null)*/ include 'views/footer.php'; ?>
+                <?/* include 'views/footer.php'; */?>
 
             </div>
 

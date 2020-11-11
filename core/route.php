@@ -45,10 +45,10 @@ class Route {
 
 
         // подключаем файл с классом контроллера
-        $controller_path = 'controller/'.$controller_name.'.php';
+        $controller_path = 'controllers/'.$controller_name.'.php';
         if(!file_exists($controller_path)) {
             $controller_name = 'controller_404';
-            $controller_path = 'controller/'.$controller_name.'.php';}
+            $controller_path = 'controllers/'.$controller_name.'.php';}
         include $controller_path;
 
 

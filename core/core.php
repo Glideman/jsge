@@ -1,12 +1,12 @@
 <?php
 
-// подключаем файлы ядра
+// core files
 include 'core/model.php';
 include 'core/view.php';
 include 'core/controller.php';
+include 'core/request.php';
+include 'core/application.php';
 
-include 'models/core_model.php';
-include 'core/app.php';
-
-// стартуем
-App::start();
+// start of the app
+$App = new Application();
+$App->start();

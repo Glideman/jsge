@@ -1,3 +1,4 @@
 /.idea
 /.htaccess
 /local
+/env.php
