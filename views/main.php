@@ -1,1 +1,1 @@
-<p>main page</p>
+<a href="/play">play</a>

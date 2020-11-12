@@ -56,7 +56,7 @@ class Application {
 		$controllerPath = 'controllers/'.$controllerName.'.php';
 
 		if(!file_exists($controllerPath))
-			$this->shutdown();
+			$this->shutdown(404, 'Not found');
 
 		require_once $controllerPath;
 
@@ -67,7 +67,7 @@ class Application {
 
 		// получаем экшн
 		if(!method_exists($controller, $actionName))
-			$this->shutdown();
+			$this->shutdown(404, 'Not found');
 
 
 		$this->currentController = $controllerName;
